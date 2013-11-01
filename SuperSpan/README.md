@@ -1,0 +1,4 @@
+A hybrid of the span and div tags, the ‘spiv’ tag. In modern browsers you are able to name your tags what ever you want but will need to apply a CSS reset to get the spiv tag to display as inline-block. Pre IE9 will completely ignore any weird tags it finds (including new HTML5 tags). I’m planning on creating a small script that will recognise the ‘spiv’ tag but wont be any help if JavaScript is turned off. SuperSpan is really just an experiment or a prototype to make mark-up more practical to use.
+
+
+Read more at http://articles.scottcarmichael.co.uk/2012/05/introducing-superspan-aka-the-spiv-tag/

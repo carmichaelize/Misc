@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Horizon</title>
+<link type="text/css" href="styles.css" rel="stylesheet" />	
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+function horizon(wrapper) {
+
+	var wrapper = $(wrapper);
+	var theWindow = $(window);
+
+	function position() {
+
+		//Calculate Positions
+		var left = (theWindow.innerWidth() / 2) - (wrapper.outerWidth() / 2);
+		var top = (theWindow.innerHeight() / 2) - (wrapper.outerHeight() / 2);
+
+		//Apply Positions to wrapper
+		wrapper.css({
+			'position' : 'absolute',
+			'top' : top, 
+			'left' : left
+		});
+
+	};
+
+	position();
+
+	//Ajust position when window is resized
+	theWindow.on('resize', position);
+
+}
+
+horizon('#outerWrapper');
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div id="outerWrapper"></div>
+
+</body>
+</html>

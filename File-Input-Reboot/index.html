@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>File Input Reboot</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js?ver=1.7.2" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<button id="button">Button</button>
+<input type="file" name="file_input" id="file_input" />
+
+
+
+  <script>
+
+   function file_input(button, hidden_input) {
+
+	    var button = $(button);
+	    var hidden_input = $(hidden_input);
+
+	    //HTML Modifications
+	    hidden_input.hide();
+
+	    var display_field = '<input type="text" name="display_field" id="display_field" style="display:none;" />';
+
+	    display_field = $(display_field).insertAfter(hidden_input);
+
+	    //Open File Input on Click
+
+	    button.on('click', function() {
+	        hidden_input.trigger('click');
+	    });
+
+	    //Display File in Text Box
+
+	    hidden_input.on('change', function(){
+
+	        display_field.show().val($(this).val());
+
+	    });
+
+	}
+
+	file_input('#button', '#file_input');
+
+
+  </script>
+
+</body>
+</html> 

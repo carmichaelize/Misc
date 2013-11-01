@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" />
+		<title>FontResizr</title>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+
+				function fontResizer (controlPanel, textArea) {
+
+					//cache control and and content area
+					var controlPanel = $(controlPanel);
+					var textArea = $(textArea);
+
+					//Build Controls		
+					controlPanel.html('<span id="small">Small</span> <span id="normal">Normal</span> <span id="large">Large</span>');
+
+					//Build Functionality
+					controlPanel.children('span').on('click', function() {
+
+						//Set font sizes 
+						var fontsize;
+
+						if ($(this).attr('id') === "small") {
+							fontsize = "0.8em"
+						} else if ($(this).attr('id') === "large") {
+							fontsize = "1.4em"
+						} else {
+							fontsize = "1em"
+						}
+
+						//Add 'selected' state on to active button
+						$(this).siblings().removeClass().end().addClass('selected');
+
+						//Apply 'selected' state on to active button
+						textArea.css("font-size", fontsize);
+
+					});
+
+				}
+
+				fontResizer("#switcher", "#content");
+
+			});
+
+		</script>
+
+	</head>
+	
+	<body>
+	
+	
+	    <div id="switcher"></div>
+
+		<div id="content">
+
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula, mauris et adipiscing ultrices, purus eros vehicula erat, et malesuada sapien mi vitae felis. Suspendisse vel facilisis magna. Etiam a neque elit, sed iaculis lacus. Sed eu interdum lectus. Vestibulum a mattis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam non quam a turpis euismod blandit. Donec eget eros a mauris tincidunt ultrices ut vitae odio. Ut sed nunc a orci semper tempor sit amet sed nunc. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras elit ipsum, rutrum ac bibendum et, malesuada sed nisl. Suspendisse laoreet ullamcorper accumsan. Nunc eu ligula lorem, et ornare ipsum. Curabitur laoreet, dui et aliquam varius, massa diam varius dui, vitae congue metus metus at purus. Etiam eleifend porta massa eget varius.
+
+		Donec magna nulla, lacinia et rhoncus gravida, faucibus eget lorem. Sed vel lectus vel quam ultrices imperdiet vel non magna. Aliquam dictum volutpat dignissim. Etiam ante lectus, aliquet vel rutrum eget, gravida et quam. Proin ultricies, nisl vel malesuada molestie, lectus odio ornare felis, eget iaculis nibh justo tristique ante. Morbi eu nulla nisi, sit amet blandit sem. Duis quis lacus enim, id consequat lorem. Ut consectetur turpis ac felis consectetur eget ornare tortor lobortis. Vivamus id neque ipsum, nec hendrerit ante. Cras auctor lectus id nulla mollis porta. Nulla ultricies, odio in tempor volutpat, eros tellus imperdiet erat, tempus placerat velit mauris sit amet velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+		</div>
+		
+		
+	</body>
+</html>

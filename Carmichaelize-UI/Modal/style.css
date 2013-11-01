@@ -1,0 +1,14 @@
+.modalOverlay {
+  top:0;
+  left:0;
+  position:fixed;
+  z-index:999;
+  background-color:red;
+  color:#fff;
+}
+
+.modalOpen {
+  width:200px;
+  height:100px;
+  border:2px solid #000;
+}

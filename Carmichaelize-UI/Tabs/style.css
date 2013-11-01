@@ -1,0 +1,36 @@
+#tabs {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+}
+
+#tabs li {
+  cursor:pointer;
+  float:left;
+  display:block;
+  width:100px;
+  text-align:center;
+  background-color:blue;
+  color:#fff;
+  line-height:50px;
+}
+
+#tabs li.first {
+	border-radius:20px 0 0 0;
+}
+
+#tabs li.last {
+	border-radius:0 20px 0 0;
+}
+
+#tabCont {
+  width:500px;
+  padding:20px;
+  border:1px solid #000;
+}
+
+.clear {
+	clear:both;
+	width:100%;
+	float:none !important;
+}

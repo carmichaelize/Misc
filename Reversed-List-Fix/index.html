@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" />
+<title>Reversed Ordered List Fixer</title>
+<link type="text/css" href="styles.css" rel="stylesheet" />	
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+
+function reverselist(list) {
+
+	var totalItems = $(list).children().length;
+
+	var start = $(list).attr('start');
+
+	var thisItem = $(list).children();
+
+	for(i=0; i < totalItems; i++) {
+
+		if (start != "" && start != undefined) {
+			//start value is defined
+			thisItem.eq(i).val(start - i);
+		
+		} else {
+			//no start value defined
+			thisItem.eq(i).val(totalItems - i);
+		}
+
+	}
+
+}
+
+reverselist('ol[reversed=""]');
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+
+<ol start="20" reversed>
+
+	<li>List Item</li>
+	<li>List Item</li>
+	<li>List Item</li>
+	<li>List Item</li>
+	<li>List Item</li>
+	<li>List Item</li>
+	<li>List Item</li>
+
+</ol>
+
+
+</body>
+</html>
