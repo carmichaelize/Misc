@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8" />
+
+  <title>Parallax</title>
+  
+  <meta name="description" content="Basic Parallax Scrolling Plugin." />
+  <meta name="keywords" content="" />
+
+  <!-- Parent Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+  <h1>
+
+  	Parallax
+  	<br />
+  	<span id="scroll">Click Me!</span>
+  </h1>
+
+
+  <!-- Content -->
+  <section class="wrapper one" data-speed="3"></section>
+  <section class="wrapper two" data-speed="5"></section>
+  <section class="wrapper three" data-speed="9"></section>
+  <section class="wrapper four" data-speed="15"></section>
+  <section class="wrapper five" data-speed="12"></section>
+  <section class="wrapper six" data-speed="13"></section>
+
+  <!-- JavaScript -->
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/parallax.js"></script>
+  
+  <script>
+
+  	$('.wrapper').parallax();
+
+  	//Animated Scroll
+	$('#scroll').on('click', function(){
+
+		$('html, body').animate({
+			scrollTop: $('html').height()
+			}, 7000, function(){
+
+				$('html, body').animate({
+				scrollTop: 0
+				}, 5000, function(){});
+
+			});
+		return false;
+	});
+
+  </script>
+
+</body>
+
+</html>
