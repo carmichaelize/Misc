@@ -1,0 +1,109 @@
+/* Reset Stylesheet (https://github.com/scottyc1000/carmichaelize.css) */
+@import url("carmichaelize.css");
+/* Twitter Bootstrap (http://twitter.github.io/bootstrap/) */
+@import url("bootstrap.css");
+/* Font Awesome (http://fortawesome.github.io/Font-Awesome/) */
+@import url("font-awesome.css");
+
+/* Default Styling */
+body {
+  font-size:1.4em;
+}
+
+a {
+  color:#000;
+}
+
+a:hover {
+
+}
+
+p, pre {
+    margin-bottom:15px;
+}
+
+/* Header Styles */
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom:10px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.4em;
+}
+
+h6 {
+    font-size: 1.4em;
+}
+
+/* Site Styling */
+
+#header {
+
+}
+
+#content {
+
+}
+
+#footer {
+
+}
+
+/* Main Navigation */
+
+#nav {
+
+}
+
+#nav ul {
+  list-style-type:none;
+  padding:0;
+}
+
+#nav ul li {
+  
+}
+
+#nav ul li a {
+  
+}
+
+
+/* Standard Media Queries (change to 'max/min-device-width' to traget non desktop only) */
+
+/* iPads (landscape) ----------- */
+@media only screen and (max-width : 1024px) {
+ 
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (max-width : 768px) {
+  
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width : 480px) {
+ 
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+ 
+}
